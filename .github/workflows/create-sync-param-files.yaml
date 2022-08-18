@@ -18,7 +18,7 @@ jobs:
 
       - name: test
         run: |
-          touch .github/hogehoge.yaml
+          touch ${GITHUB_ACTION_PATH}/hogehoge.yaml
 
       - name: Create PR
         id: create-pr
