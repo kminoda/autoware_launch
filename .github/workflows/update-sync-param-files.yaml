@@ -16,10 +16,7 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
 
-      - uses: actions/checkout@v1      
-                       
-      # - name: Add list of files to a metadata file and generate Readme
-      #   run: touch .github/hogehoge.yaml
+      - uses: actions/checkout@v1
 
       - name: Generate sync-param-files.yaml
         run: |
@@ -32,12 +29,7 @@ jobs:
         with:
           token: ${{ steps.generate-token.outputs.token }}
           base: ${{ github.event.repository.default_branch }}
-          branch: hogehoge
-          title: fugafuga
-          commit-message: "chore: fugafuga"
+          branch: update-sync-param-files
+          title: "chore: update sync-param-files.yaml"
+          commit-message: "chore: update sync-param-files.yaml"
           body: ${{ steps.create-pr-body.outputs.body }}
-          labels: ""
-          assignees: ""
-          reviewers: ""
-          signoff: true
-          delete-branch: true
