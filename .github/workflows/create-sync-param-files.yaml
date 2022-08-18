@@ -16,7 +16,7 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
 
-      # - uses: actions/checkout@v1      
+      - uses: actions/checkout@v1      
                        
       - name: Add list of files to a metadata file and generate Readme
         run: touch .github/hogehoge.yaml
