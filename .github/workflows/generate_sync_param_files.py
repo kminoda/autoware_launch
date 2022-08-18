@@ -10,8 +10,13 @@ def main():
     tier4_launch_path = "/tmp/autoware.universe/launch/"
     files = glob.iglob(tier4_launch_path + '**/*.param.yaml', recursive=True)
 
-    src2dst = []
+    files_str = []
     for file in files:
+        files_str.append(file)
+    files_str.sort()
+
+    src2dst = []
+    for file in files_str:
         src_list = file.split('/')[3:]
         dst_list = ['autoware_launch', 'config'] + file.split('/')[4:5] + file.split('/')[6:]
         src = ''
