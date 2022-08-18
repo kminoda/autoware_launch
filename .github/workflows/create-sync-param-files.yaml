@@ -16,14 +16,13 @@ jobs:
           app_id: ${{ secrets.APP_ID }}
           private_key: ${{ secrets.PRIVATE_KEY }}
 
-      - uses: actions/checkout@v1      
+      # - uses: actions/checkout@v1      
                        
       - name: Add list of files to a metadata file and generate Readme
-        run: |
-          touch .github/hogehoge.yaml
+        run: touch .github/hogehoge.yaml
 
-      - name:  Commit File changes
-        # skipping the commit code
+      # - name:  Commit File changes
+      # skipping the commit code
       # - name: Push changes                               
       #   uses: ad-m/github-push-action@master
       #     with:                                 
