@@ -28,7 +28,8 @@ def main():
         })
 
     sync_param_file = [{
-        "repository": "autowarefoundation/autoware.universe",
+        # "repository": "autowarefoundation/autoware.universe",
+        "repository": "kminoda/autoware.universe",
         "files": src2dst
     }]
 
