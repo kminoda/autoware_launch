@@ -18,15 +18,13 @@ jobs:
 
       - uses: actions/checkout@v1      
                        
-      - name: Add list of files to a metadata file and generate Readme
-        run: touch .github/hogehoge.yaml
+      # - name: Add list of files to a metadata file and generate Readme
+      #   run: touch .github/hogehoge.yaml
 
-      # - name:  Commit File changes
-      # skipping the commit code
-      # - name: Push changes                               
-      #   uses: ad-m/github-push-action@master
-      #     with:                                 
-      #       github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate sync-param-files.yaml
+        run: |
+          git clone https://github.com/autowarefoundation/autoware.universe.git /tmp/autoware.universe
+          python3 .github/workflows/generate_sync_param_files.py .github/sync-param-files.yaml
 
       - name: Create PR
         id: create-pr
