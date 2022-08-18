@@ -1,4 +1,4 @@
-name: create-sync-param-files
+name: update-sync-param-files
 
 on:
   schedule:
