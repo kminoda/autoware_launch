@@ -31,7 +31,7 @@
       <arg name="gnss_particle_corrector_param_path" value="$(var loc_config_path)/yabloc/gnss_particle_corrector.param.yaml"/>
       <arg name="predictor_param_path" value="$(var loc_config_path)/yabloc/predictor.param.yaml"/>
       <arg name="graph_segment_param_path" value="$(var loc_config_path)/yabloc/graph_segment.param.yaml"/>
-      <arg name="segment_filter_param_path" value="$(var loc_config_path)/yabloc/segment_filter.param.yaml"/>
+      <arg name="line_segments_projector_param_path" value="$(var loc_config_path)/yabloc/line_segments_projector.param.yaml"/>
       <arg name="undistort_param_path" value="$(var loc_config_path)/yabloc/undistort.param.yaml"/>
       <arg name="ground_server_param_path" value="$(var loc_config_path)/yabloc/ground_server.param.yaml"/>
       <arg name="ll2_decomposer_param_path" value="$(var loc_config_path)/yabloc/ll2_decomposer.param.yaml"/>
